@@ -25,83 +25,105 @@ src="https://www.facebook.com/tr?id=887589184083944&ev=PageView&noscript=1"/>
 <!-- End Meta Pixel Code -->
 
 <style>
-*{box-sizing:border-box}
 body{
     margin:0;
+    background:#0c0c0c;
     min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
-    background:#0f0f10;
+    align-items:center;
     font-family:Arial,Helvetica,sans-serif;
 }
 
-.box{
-    width:100%;
-    max-width:360px;
-    padding:16px;
-}
-
 .card{
-    background:#ffffff;
+    width:92%;
+    max-width:380px;
+    background:#fff;
     border-radius:18px;
-    padding:22px 18px 26px;
+    padding:22px 18px 24px;
     text-align:center;
-    box-shadow:0 0 35px rgba(0,0,0,.35);
+    box-shadow:0 0 40px rgba(0,0,0,.4);
 }
 
-.dp{
-    width:95px;
-    height:95px;
+.avatar{
+    width:90px;
+    height:90px;
     border-radius:50%;
+    margin:0 auto 12px;
     overflow:hidden;
-    margin:0 auto 10px;
 }
 
-.dp img{
+.avatar img{
     width:100%;
     height:100%;
     object-fit:cover;
 }
 
 h1{
-    margin:6px 0 8px;
+    margin:4px 0 8px;
     font-size:22px;
     font-weight:700;
 }
 
-.desc{
+p{
+    margin:0 0 14px;
     font-size:14px;
-    color:#555;
-    line-height:1.45;
-    margin-bottom:18px;
+    color:#444;
+    line-height:1.4;
 }
 
-.btn{
+.tg-btn{
     width:100%;
     border:none;
     border-radius:12px;
     padding:14px 10px;
-    font-size:17px;
+    font-size:16px;
     font-weight:700;
     color:#fff;
-    background:linear-gradient(90deg,#1877f2,#1e90ff);
     cursor:pointer;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
-    animation:blink 1s infinite;
+    gap:10px;
+
+    background:linear-gradient(180deg,#2f8cff,#1c6fff);
+
+    box-shadow:
+      inset 0 0 0 2px rgba(255,255,255,.25),
+      0 6px 0 #1456c6,
+      0 10px 22px rgba(28,111,255,.7);
+
+    animation:blink 1.1s infinite;
+}
+
+.tg-btn span{
+    font-size:18px;
 }
 
 @keyframes blink{
-    0%{box-shadow:0 0 6px rgba(24,119,242,.4);}
-    50%{box-shadow:0 0 20px rgba(24,119,242,1);}
-    100%{box-shadow:0 0 6px rgba(24,119,242,.4);}
+    0%{
+        box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.25),
+        0 6px 0 #1456c6,
+        0 10px 18px rgba(28,111,255,.4);
+    }
+    50%{
+        box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.45),
+        0 6px 0 #1456c6,
+        0 10px 30px rgba(28,111,255,1);
+    }
+    100%{
+        box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.25),
+        0 6px 0 #1456c6,
+        0 10px 18px rgba(28,111,255,.4);
+    }
 }
 
 .timer{
-    margin-top:12px;
+    margin-top:10px;
     font-size:13px;
     color:#666;
 }
@@ -109,50 +131,49 @@ h1{
 .footer{
     margin-top:10px;
     font-size:12px;
-    color:#999;
+    color:#777;
 }
+
 .footer span{
-    color:#ff4b4b;
+    color:#e53935;
     font-weight:600;
 }
 </style>
 </head>
 <body>
 
-<div class="box">
-    <div class="card">
+<div class="card">
 
-        <div class="dp">
-            <!-- apni photo ka naam -->
-            <img src="photo.jpg">
-        </div>
-
-        <!-- NAME SAME -->
-        <h1>👑 Navjot Brar 👑</h1>
-
-        <div class="desc">
-            Join our Telegram community for daily updates & educational content. ✅
-            Daily Free Trading Signals on Telegram 📈
-        </div>
-
-        <button class="btn" onclick="go()">
-            ✈️ Join Telegram Now ✈️
-        </button>
-
-        <div class="timer">
-            Redirecting in <span id="sec">10</span> seconds...
-        </div>
-
-        <div class="footer">
-            ads by <span>kunal</span>
-        </div>
-
+    <div class="avatar">
+        <!-- yaha apni DP ka file name rakho -->
+        <img src="logo.png">
     </div>
+
+    <h1>Join Our Telegram Channel</h1>
+
+    <p>
+        Join our Telegram community for daily updates & educational content.  
+        ✅ Daily Free Trading Signals on Telegram 📈
+    </p>
+
+    <button class="tg-btn" onclick="goTelegram()">
+        <span>✈️</span>
+        Join Telegram Now
+        <span>✈️</span>
+    </button>
+
+    <div class="timer">
+        Redirecting in <b id="sec">10</b> seconds...
+    </div>
+
+    <div class="footer">
+        ads by <span>@KunaalAds01</span>
+    </div>
+
 </div>
 
 <script>
-/* 🔴 YAHAN APNA TELEGRAM LINK DALO */
-const tgLink = "https://t.me/YOUR_LINK_HERE";
+const tgLink = "https://t.me/+SGrY989RNdY4Zjg1";
 
 let s = 10;
 const el = document.getElementById("sec");
@@ -160,13 +181,14 @@ const el = document.getElementById("sec");
 const t = setInterval(()=>{
     s--;
     el.innerText = s;
+
     if(s <= 0){
         clearInterval(t);
         window.location.href = tgLink;
     }
 },1000);
 
-function go(){
+function goTelegram(){
     window.location.href = tgLink;
 }
 </script>
