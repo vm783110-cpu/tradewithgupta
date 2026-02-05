@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Trade_with_navjot brar – Official Stock Market Channel</title>
+<title>Join Telegram</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Meta Pixel Code -->
@@ -25,166 +25,151 @@ src="https://www.facebook.com/tr?id=887589184083944&ev=PageView&noscript=1"/>
 <!-- End Meta Pixel Code -->
 
 <style>
-*{
+*{box-sizing:border-box}
+body{
     margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#0f0f10;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
-body{
-    min-height:100vh;
-    background:
-      radial-gradient(circle at top,#14233b,#060b14 70%);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:18px;
-    color:#fff;
+.box{
+    width:100%;
+    max-width:360px;
+    padding:16px;
 }
 
 .card{
-    width:100%;
-    max-width:420px;
-    background:rgba(255,255,255,0.05);
-    border-radius:22px;
-    padding:26px 22px 30px;
+    background:#ffffff;
+    border-radius:18px;
+    padding:22px 18px 26px;
     text-align:center;
-    box-shadow:0 0 35px rgba(0,153,255,0.12);
-    backdrop-filter: blur(8px);
+    box-shadow:0 0 35px rgba(0,0,0,.35);
 }
 
-.dp-wrap{
-    width:110px;
-    height:110px;
-    margin:0 auto 14px;
+.dp{
+    width:95px;
+    height:95px;
     border-radius:50%;
-    padding:4px;
-    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    overflow:hidden;
+    margin:0 auto 10px;
 }
 
-.dp-wrap img{
+.dp img{
     width:100%;
     height:100%;
     object-fit:cover;
-    border-radius:50%;
-    background:#000;
-}
-
-.badge{
-    display:inline-block;
-    padding:6px 14px;
-    border-radius:999px;
-    background:rgba(0,200,120,.15);
-    color:#42ffb0;
-    font-size:12px;
-    font-weight:600;
-    margin-bottom:10px;
 }
 
 h1{
-    font-size:26px;
-    margin:6px 0 6px;
-    letter-spacing:.3px;
-}
-
-.sub{
-    font-size:14px;
-    color:#cbd5e1;
-    margin-bottom:16px;
-}
-
-.features{
-    text-align:left;
-    margin:18px 0 22px;
-}
-
-.features li{
-    list-style:none;
-    display:flex;
-    align-items:flex-start;
-    gap:10px;
-    margin-bottom:10px;
-    font-size:14px;
-    color:#e5e7eb;
-}
-
-.features li span{
-    color:#38bdf8;
+    margin:6px 0 8px;
+    font-size:22px;
     font-weight:700;
 }
 
-.cta{
-    margin-top:10px;
+.desc{
+    font-size:14px;
+    color:#555;
+    line-height:1.45;
+    margin-bottom:18px;
 }
 
-.cta a{
-    display:block;
+.btn{
     width:100%;
-    text-decoration:none;
-    padding:15px 16px;
-    border-radius:14px;
-    background:linear-gradient(90deg,#00c6ff,#0072ff);
-    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:14px 10px;
+    font-size:17px;
     font-weight:700;
-    font-size:16px;
-    letter-spacing:.4px;
-    box-shadow:0 0 18px rgba(0,153,255,.55);
-    animation:pulse 1.2s infinite;
+    color:#fff;
+    background:linear-gradient(90deg,#1877f2,#1e90ff);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    animation:blink 1s infinite;
 }
 
-@keyframes pulse{
-    0%{transform:scale(1);box-shadow:0 0 18px rgba(0,153,255,.45);}
-    50%{transform:scale(1.05);box-shadow:0 0 32px rgba(0,153,255,.85);}
-    100%{transform:scale(1);box-shadow:0 0 18px rgba(0,153,255,.45);}
+@keyframes blink{
+    0%{box-shadow:0 0 6px rgba(24,119,242,.4);}
+    50%{box-shadow:0 0 20px rgba(24,119,242,1);}
+    100%{box-shadow:0 0 6px rgba(24,119,242,.4);}
+}
+
+.timer{
+    margin-top:12px;
+    font-size:13px;
+    color:#666;
 }
 
 .footer{
-    margin-top:14px;
+    margin-top:10px;
     font-size:12px;
-    color:#94a3b8;
+    color:#999;
+}
+.footer span{
+    color:#ff4b4b;
+    font-weight:600;
 }
 </style>
 </head>
-
 <body>
 
-<div class="card">
+<div class="box">
+    <div class="card">
 
-    <div class="badge">✔ Trusted Stock Market Community</div>
+        <div class="dp">
+            <!-- apni photo ka naam -->
+            <img src="photo.jpg">
+        </div>
 
-    <div class="dp-wrap">
-        <!-- Photo ka name = dp.jpg -->
-        <img src="dp.jpg" alt="Trade with Gupta">
+        <!-- NAME SAME -->
+        <h1>👑 Navjot Brar 👑</h1>
+
+        <div class="desc">
+            Join our Telegram community for daily updates & educational content. ✅
+            Daily Free Trading Signals on Telegram 📈
+        </div>
+
+        <button class="btn" onclick="go()">
+            ✈️ Join Telegram Now ✈️
+        </button>
+
+        <div class="timer">
+            Redirecting in <span id="sec">10</span> seconds...
+        </div>
+
+        <div class="footer">
+            ads by <span>kunal</span>
+        </div>
+
     </div>
-
-    <h1>Trade_with_Gupta</h1>
-    <div class="sub">
-        Professional stock market learning & market analysis channel
-    </div>
-
-    <ul class="features">
-        <li><span>✔</span> Educational stock market learning channel</li>
-        <li><span>✔</span> We provide best market analysis & levels</li>
-        <li><span>✔</span> 24×7 instant support & guidance</li>
-        <li><span>✔</span> 100% safe & secure community environment</li>
-        <li><span>✔</span> Trusted VIP stock market group</li>
-        <li><span>✔</span> High quality learning for traders & beginners</li>
-    </ul>
-
-    <div class="cta">
-        <a href="https://t.me/+SGrY989RNdY4Zjg1" target="_blank">
-            🚀 JOIN TELEGRAM CHANNEL
-        </a>
-    </div>
-
-    <div class="footer">
-        © 2025 Trade_with_navjot brar • Telegram Community
-    </div>
-
 </div>
+
+<script>
+/* 🔴 YAHAN APNA TELEGRAM LINK DALO */
+const tgLink = "https://t.me/YOUR_LINK_HERE";
+
+let s = 10;
+const el = document.getElementById("sec");
+
+const t = setInterval(()=>{
+    s--;
+    el.innerText = s;
+    if(s <= 0){
+        clearInterval(t);
+        window.location.href = tgLink;
+    }
+},1000);
+
+function go(){
+    window.location.href = tgLink;
+}
+</script>
 
 </body>
 </html>
-
-
